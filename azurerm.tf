@@ -1,5 +1,5 @@
 provider "azurerm" {
-  environment     = var.cloud_name
+  environment = var.cloud_name
   features {
   }
 }

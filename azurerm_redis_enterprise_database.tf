@@ -8,6 +8,6 @@ resource "azurerm_redis_enterprise_database" "primary" {
 resource "azurerm_redis_enterprise_database" "secondary" {
   name                = "default"
   resource_group_name = azurerm_resource_group.resource_group.name
-  cluster_id          = azurerm_redis_enterprise_cluster.primary.id
+  cluster_id          = azurerm_redis_enterprise_cluster.secondary.id
   clustering_policy   = var.acre_cluster_policy
 }
