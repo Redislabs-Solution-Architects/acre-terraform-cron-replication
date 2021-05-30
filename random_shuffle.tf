@@ -11,7 +11,6 @@ resource "random_shuffle" "regions-with-az" {
   # N West US 2 -> West Central US
   input = [
     "australiaeast",
-    "centralindia",
     "centralus",
     "eastus",
     "eastus2",

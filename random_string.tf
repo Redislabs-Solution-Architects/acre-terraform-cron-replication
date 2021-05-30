@@ -53,3 +53,26 @@ resource "random_string" "acre_group_name" {
   special = false
   upper   = false
 }
+
+resource "random_string" "front_door_name" {
+  length  = 8
+  number  = false
+  special = false
+  upper   = false
+}
+
+resource "random_string" "app_insights_primary" {
+  length  = 8
+  number  = false
+  special = false
+  upper   = false
+}
+
+resource "random_string" "app_insights_secondary" {
+  length  = 8
+  number  = false
+  special = false
+  upper   = false
+}
+
+
