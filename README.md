@@ -92,7 +92,7 @@ To get a local copy up and running follow these simple steps.
 <br />
 <p align="center">
   <a href="https://github.com/redisgeek/acre-terraform-cron-replication">
-    <img src="images/v1.png" alt="architecture diagram" height="10%" width="10%">
+    <img src="images/v1.png" alt="architecture diagram" height="25%" width="25%">
   </a>
 </p>
 
