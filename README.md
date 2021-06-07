@@ -16,7 +16,7 @@
 <h3 align="center">Azure Cache for Redis Enterprise (ACRE) with scheduled exports for active-passive DR</h3>
 
   <p align="center">
-    ACRE, stop-gap, active-passive DR until geo-replication available in all regions.
+    ACRE, active-passive DR for regions that don't yet have active-active, and for use with modules. 
     <br />
     <a href="https://github.com/redisgeek/acre-terraform-cron-replication"><strong>Explore the docs »</strong></a>
     <br />
@@ -61,8 +61,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project is being developed as a workaround, for regions that do not have active-active available.
-
+This solution can be used to provide DR where active-active is not yet available.
+The solution can also provide DR for RediSearch, RedisTimeSeries and RedisBloom, modules in ACRE.
 This solution could also serve as a base for use cases besides DR, like testing.
 
 ### Built With
@@ -77,27 +77,24 @@ To get a local copy up and running follow these simple steps.
 ### Prerequisites
 
 * Azure CLI
-*
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/redisgeek/acre-terraform-cron-replication.git
+   git clone https://github.com/redisgeek/acre-terraform-cron-replication.git --recurse-submodule
    ```
-2. Populate
-
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used.
-Additional screenshots, code examples and demos work well in this space.
-You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+<br />
+<p align="center">
+  <a href="https://github.com/redisgeek/acre-terraform-cron-replication">
+    <img src="images/v1.png" alt="architecture diagram" width="3195" height="1315">
+  </a>
+</p>
 
 
 <!-- ROADMAP -->
