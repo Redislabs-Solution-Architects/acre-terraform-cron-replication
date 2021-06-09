@@ -1,3 +1,4 @@
 [submodule "com.redisgeek.function.acre.export"]
 	path = com.redisgeek.function.acre.export
-	url = https://github.com/redisgeek/com.redisgeek.function.acre.export
+	url = git@github.com:redisgeek/com.redisgeek.function.acre.export
+        branch = main
