@@ -75,4 +75,9 @@ resource "random_string" "app_insights_secondary" {
   upper   = false
 }
 
-
+resource "random_string" "export_function_name" {
+  length  = 12
+  number  = false
+  special = false
+  upper   = false
+}
