@@ -34,3 +34,7 @@ variable "tags" {
   default     = {}
   type        = map(string)
 }
+
+variable "AZURE_CLIENT_SECRET" {
+  type = string
+}
