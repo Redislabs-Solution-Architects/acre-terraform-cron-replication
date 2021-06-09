@@ -1,4 +1,5 @@
 resource "azurerm_frontdoor" "example" {
+  count                                        = 0
   name                                         = random_string.front_door_name.result
   resource_group_name                          = azurerm_resource_group.resource_group.name
   enforce_backend_pools_certificate_name_check = false
