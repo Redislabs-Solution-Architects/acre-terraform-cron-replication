@@ -65,6 +65,16 @@ This solution can be used to provide DR where active-active is not yet available
 The solution can also provide DR for RediSearch, RedisTimeSeries and RedisBloom, modules in ACRE.
 This solution could also serve as a base for use cases besides DR, like testing.
 
+The primary cluster, deployed across 3-AZs, will have a 99.99 SLA that is financially backed by Azure.
+There are no "preview" features included in this reference implementation.
+The components used in this solution are all Generally Available (GA).
+
+The functions automate the following:
+
+- export the primary cluster as a snapshot (rdb)
+- copy rdb to secondary region
+- import rdb to secondary (DR) cluster
+
 ### Built With
 
 * [Terraform](https://terraform.io)
@@ -103,12 +113,10 @@ To get a local copy up and running follow these simple steps.
 See the [open issues](https://github.com/redisgeek/acre-terraform-cron-replication/issues) for a list of proposed features (and known issues).
 
 
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
 Pull-requests are welcomed!
-
 
 <!-- LICENSE -->
 ## License
