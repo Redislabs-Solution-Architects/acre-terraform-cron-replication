@@ -1,5 +1,5 @@
 resource "azurerm_storage_account" "primary" {
-  name                     = format("redisgeek%s", random_string.storage_primary_name.result)
+  name                     = format("primary%s", random_string.storage_primary_name.result)
   resource_group_name      = azurerm_resource_group.resource_group.name
   location                 = random_shuffle.regions-with-az.result[0]
   account_tier             = "Standard"
@@ -8,7 +8,7 @@ resource "azurerm_storage_account" "primary" {
 }
 
 resource "azurerm_storage_account" "secondary" {
-  name                     = format("redisgeek%s", random_string.storage_secondary_name.result)
+  name                     = format("secondary%s", random_string.storage_secondary_name.result)
   resource_group_name      = azurerm_resource_group.resource_group.name
   location                 = random_shuffle.regions-with-az.result[1]
   account_tier             = "Standard"
