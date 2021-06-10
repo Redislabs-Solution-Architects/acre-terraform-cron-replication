@@ -9,21 +9,15 @@ locals {
     database_id       = azurerm_redis_enterprise_database.primary.id
     storage_account   = azurerm_storage_account.primary.name
     storage_container = azurerm_storage_container.primary.name
-    storage_key       = azurerm_storage_account.primary.primary_access_key
-    account_sas       = data.azurerm_storage_account_sas.primary.sas
-    blob_sas          = data.azurerm_storage_account_blob_container_sas.primary.sas
   }
-  secondary_info = {
-    id                = azurerm_redis_enterprise_cluster.secondary.id
-    hostname          = azurerm_redis_enterprise_cluster.secondary.hostname
-    access_key        = azurerm_redis_enterprise_database.secondary.primary_access_key
-    database_id       = azurerm_redis_enterprise_database.secondary.id
-    storage_account   = azurerm_storage_account.secondary.name
-    storage_container = azurerm_storage_container.secondary.name
-    storage_key       = azurerm_storage_account.secondary.primary_access_key
-    account_sas       = data.azurerm_storage_account_sas.secondary.sas
-    blob_sas          = data.azurerm_storage_account_blob_container_sas.secondary.sas
-  }
+    secondary_info = {
+      id                = azurerm_redis_enterprise_cluster.secondary.id
+      hostname          = azurerm_redis_enterprise_cluster.secondary.hostname
+      access_key        = azurerm_redis_enterprise_database.secondary.primary_access_key
+      database_id       = azurerm_redis_enterprise_database.secondary.id
+      storage_account   = azurerm_storage_account.secondary.name
+      storage_container = azurerm_storage_container.secondary.name
+    }
 }
 
 output "redisgeek_config" {
