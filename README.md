@@ -131,6 +131,10 @@ DaShaun - [@dashaun](https://twitter.com/dashaun)
 
 Project Link: [https://github.com/redisgeek/acre-terraform-cron-replication](https://github.com/redisgeek/acre-terraform-cron-replication)
 
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [Deploying an Azure Function App with Terraform](https://adrianhall.github.io/typescript/2019/10/23/terraform-functions/)
+* [Deploy Azure Functions with Terraform](https://www.maxivanov.io/deploy-azure-functions-with-terraform/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
