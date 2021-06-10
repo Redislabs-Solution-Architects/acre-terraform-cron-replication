@@ -5,7 +5,7 @@ resource "azurerm_app_service_plan" "primary_plan" {
   kind                = "functionapp"
   reserved            = true
   sku {
-    tier     = "Dynamic"
-    size     = "Y1"
+    tier = "Dynamic"
+    size = "Y1"
   }
 }
