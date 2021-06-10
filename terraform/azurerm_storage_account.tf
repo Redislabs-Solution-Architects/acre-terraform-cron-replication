@@ -5,6 +5,7 @@ resource "azurerm_storage_account" "primary" {
   account_tier             = "Standard"
   account_replication_type = "LRS"
   tags                     = merge(var.tags)
+  min_tls_version          = "TLS1_2"
 }
 
 resource "azurerm_storage_account" "secondary" {
