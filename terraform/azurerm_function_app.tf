@@ -4,12 +4,11 @@ resource "azurerm_function_app" "export" {
   location            = random_shuffle.regions-with-az.result[0]
   app_service_plan_id = azurerm_app_service_plan.primary_plan.id
   app_settings = {
-    "AzureWebJobsStorage" : "",
-    "WEBSITE_RUN_FROM_PACKAGE"    = "https://${azurerm_storage_account.primary.name}.blob.core.windows.net/${azurerm_storage_container.primary.name}/${azurerm_storage_blob.storage_blob.name}${data.azurerm_storage_account_blob_container_sas.primary.sas}",
-    "FUNCTIONS_WORKER_RUNTIME"       = "java",
-    "APPINSIGHTS_INSTRUMENTATIONKEY" = azurerm_application_insights.primary.instrumentation_key,
-    "AzureWebJobsDisableHomepage"    = "false"
-    "MAIN_CLASS" : "com.redisgeek.function.acre.export.Application",
+    "AzureWebJobsStorage" : "DefaultEndpointsProtocol=https;AccountName=${azurerm_storage_account.primary.name};AccountKey=${azurerm_storage_account.primary.primary_access_key};EndpointSuffix=core.windows.net",
+    "WEBSITE_RUN_FROM_PACKAGE" : "https://${azurerm_storage_account.primary.name}.blob.core.windows.net/${azurerm_storage_container.primary.name}/${azurerm_storage_blob.export.name}${data.azurerm_storage_account_sas.sas.sas}",
+    "FUNCTIONS_WORKER_RUNTIME" : "java",
+    "FUNCTIONS_EXTENSION_VERSION" : "~3",
+    "APPINSIGHTS_INSTRUMENTATIONKEY" : azurerm_application_insights.primary.instrumentation_key,
     "acre_id" : azurerm_redis_enterprise_cluster.primary.id,
     "rg_name" : azurerm_resource_group.resource_group.name,
     "blobSas" : data.azurerm_storage_account_blob_container_sas.primary.sas,
