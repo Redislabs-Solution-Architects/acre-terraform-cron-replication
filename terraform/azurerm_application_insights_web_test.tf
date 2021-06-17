@@ -1,4 +1,5 @@
 resource "azurerm_application_insights_web_test" "export-test" {
+  count                   = 0
   name                    = "tf-test-appinsights-webtest"
   location                = azurerm_application_insights.primary.location
   resource_group_name     = azurerm_resource_group.resource_group.name
@@ -17,12 +18,4 @@ resource "azurerm_application_insights_web_test" "export-test" {
 </WebTest>
 XML
 
-}
-
-output "webtest_id" {
-  value = azurerm_application_insights_web_test.example.id
-}
-
-output "webtests_synthetic_id" {
-  value = azurerm_application_insights_web_test.example.synthetic_monitor_id
 }
