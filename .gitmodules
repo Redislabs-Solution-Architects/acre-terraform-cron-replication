@@ -3,3 +3,6 @@
 	url = git@github.com:redisgeek/com.redisgeek.function.acre.export
         branch = main
         ignore = dirty
+[submodule "com.redisgeek.function.azure.storage.copy"]
+	path = com.redisgeek.function.azure.storage.copy
+	url = git@github.com:redisgeek/com.redisgeek.function.azure.storage.copy.git

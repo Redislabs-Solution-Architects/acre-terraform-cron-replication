@@ -16,16 +16,7 @@
 <h3 align="center">Azure Cache for Redis Enterprise (ACRE) with scheduled exports for active-passive DR</h3>
 
   <p align="center">
-    ACRE, active-passive DR for regions that don't yet have active-active, and for use with modules. 
-    <br />
-    <a href="https://github.com/redisgeek/acre-terraform-cron-replication"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/redisgeek/acre-terraform-cron-replication">View Demo</a>
-    ·
-    <a href="https://github.com/redisgeek/acre-terraform-cron-replication/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/redisgeek/acre-terraform-cron-replication/issues">Request Feature</a>
+    ACRE, active-passive DR for regions that don't yet have active-active, and for use with modules.
   </p>
 
 

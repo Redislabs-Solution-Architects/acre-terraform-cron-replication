@@ -12,13 +12,16 @@ resource "random_shuffle" "regions-with-az" {
   input = [
     "australiaeast",
     "centralus",
+    "centralindia",
     "eastus",
     "eastus2",
     "northeurope",
     "southcentralus",
     "southeastasia",
     "uksouth",
+    "westcentralus",
     "westeurope",
+    "westus",
     "westus2"
   ]
   result_count = 2
@@ -26,18 +29,19 @@ resource "random_shuffle" "regions-with-az" {
 
 resource "random_shuffle" "region-any" {
   input = [
+    "australiaeast",
+    "centralus",
+    "centralindia",
     "eastus",
+    "eastus2",
+    "northeurope",
+    "southcentralus",
+    "southeastasia",
+    "uksouth",
+    "westcentralus",
     "westeurope",
     "westus",
-    "eastus2",
-    "westus2",
-    "southcentralus",
-    "uksouth",
-    "southeastasia",
-    "australiaeast",
-    "northeurope",
-    "centralus",
-    "centralindia"
+    "westus2"
   ]
   result_count = 1
 }
