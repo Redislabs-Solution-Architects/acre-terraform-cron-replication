@@ -1,15 +1,15 @@
 [submodule "com.redisgeek.function.acre.export"]
-	path = com.redisgeek.function.acre.export
-	url = git@github.com:redisgeek/com.redisgeek.function.acre.export
+    path = com.redisgeek.function.acre.export
+    url = git@github.com:redisgeek/com.redisgeek.function.acre.export
     branch = main
     ignore = dirty
 [submodule "com.redisgeek.function.azure.storage.copy"]
-	path = com.redisgeek.function.azure.storage.copy
-	url = git@github.com:redisgeek/com.redisgeek.function.azure.storage.copy.git
+    path = com.redisgeek.function.azure.storage.copy
+    url = git@github.com:redisgeek/com.redisgeek.function.azure.storage.copy.git
     branch = main
     ignore = dirty
-[submodule "terraform/com.redisgeek.function.acre.import"]
-	path = com.redisgeek.function.acre.import
-	url = git@github.com:redisgeek/com.redisgeek.function.acre.import
+[submodule "com.redisgeek.function.acre.import"]
+    path = com.redisgeek.function.acre.import
+    url = git@github.com:redisgeek/com.redisgeek.function.acre.import
     branch = main
     ignore = dirty
