@@ -4,7 +4,7 @@ data "azurerm_storage_account_blob_container_sas" "primary" {
   https_only        = true
 
   start  = "2021-06-01"
-  expiry = "2021-06-01"
+  expiry = "2024-06-01"
 
   permissions {
     read   = true
@@ -28,7 +28,7 @@ data "azurerm_storage_account_blob_container_sas" "secondary" {
   https_only        = true
 
   start  = "2021-06-01"
-  expiry = "2021-06-01"
+  expiry = "2024-06-01"
 
   permissions {
     read   = true
