@@ -4,73 +4,12 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
+# ACRE-TERRAFORM-CRON-REPLICATION
 
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/redisgeek/acre-terraform-cron-replication">
-    <img src="images/redis-icon.svg" alt="Logo" width="80" height="80">
-  </a>
-</p>
+Deploy Azure Cache for Redis Enterprise (ACRE) in two separate regions with scheduled replication from primary to secondary.
 
-<h3 align="center">Azure Cache for Redis Enterprise (ACRE) with scheduled exports for active-passive DR</h3>
+## | [Getting Started](#getting-started) | [About](#about) | [See Also](#see-also)  | [License](#license) |
 
-  <p align="center">
-    ACRE, active-passive DR for regions that don't yet have active-active, and for use with modules.
-  </p>
-
-
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-This solution can be used to provide DR where active-active is not yet available.
-The solution can also provide DR for RediSearch, RedisTimeSeries and RedisBloom, modules in ACRE.
-This solution could also serve as a base for use cases besides DR, like testing.
-
-The primary cluster, deployed across 3-AZs, will have a 99.99 SLA that is financially backed by Azure.
-There are no "preview" features included in this reference implementation.
-The components used in this solution are all Generally Available (GA).
-
-The functions automate the following:
-
-- export the primary cluster as a snapshot (rdb)
-- copy rdb to secondary region
-- import rdb to secondary (DR) cluster
-
-### Built With
-
-* [Terraform](https://terraform.io)
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
@@ -87,35 +26,45 @@ To get a local copy up and running follow these simple steps.
    ```
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## About The Project
 
-<br />
-<p align="center">
-  <a href="https://github.com/redisgeek/acre-terraform-cron-replication">
-    <img src="images/v1.png" alt="architecture diagram" height="25%" width="25%">
-  </a>
-</p>
+Can be used as part of multiple solutions:
+- Provide DR where active-active is not yet available.
+- Provide DR for RediSearch, RedisTimeSeries and RedisBloom, modules in ACRE.
+- Serve as a base for use cases besides DR, like .
+
+The primary cluster, deployed across 3-AZs, will have a 99.99 SLA that is financially backed by Azure.
+There are no "preview" features included in this reference implementation.
+The components used in this solution are all Generally Available (GA).
+
+The functions automate the following:
+
+- export the primary cluster as a snapshot (rdb)
+- copy rdb to secondary region
+- import rdb to secondary (DR) cluster
+
+## Overview
+
+![Architecture Overview](images/v1.png)
 
 
-<!-- ROADMAP -->
-## Roadmap
+### Built With
+
+* [Terraform](https://terraform.io)
+
+### Roadmap
 
 See the [open issues](https://github.com/redisgeek/acre-terraform-cron-replication/issues) for a list of proposed features (and known issues).
 
 
-<!-- CONTRIBUTING -->
-## Contributing
+### Contributing
 
 Pull-requests are welcomed!
 
-<!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-<!-- CONTACT -->
 ## Contact
 
 DaShaun - [@dashaun](https://twitter.com/dashaun)
