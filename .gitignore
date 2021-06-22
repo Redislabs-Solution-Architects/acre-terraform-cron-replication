@@ -6,3 +6,4 @@ terraform.tfstate*
 
 export-function.zip
 copy-function.zip
+import-function.zip
