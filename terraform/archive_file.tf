@@ -4,9 +4,9 @@ data "archive_file" "export" {
   output_path = "export-function.zip"
 }
 
-data "archive_file" "copy" {
+data "archive_file" "import" {
   type        = "zip"
-  source_dir  = "../com.redisgeek.function.acre.import/target/azure-functions/azure-import-function/"
+  source_dir  = "../com.redisgeek.function.acre.import/target/azure-functions/acre-import-function/"
   output_path = "import-function.zip"
 }
 
