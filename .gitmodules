@@ -9,7 +9,7 @@
     branch = main
     ignore = dirty
 [submodule "com.redisgeek.function.acre.import"]
-    path = com.redisgeek.function.acre.import
-    url = git@github.com:redisgeek/com.redisgeek.function.acre.import
-    branch = main
-    ignore = dirty
+	path = com.redisgeek.function.acre.import
+	url = git@github.com:redisgeek/com.redisgeek.function.acre.import
+	branch = main
+	ignore = dirty
