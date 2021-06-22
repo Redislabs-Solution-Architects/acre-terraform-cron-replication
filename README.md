@@ -23,8 +23,32 @@ To get a local copy up and running follow these simple steps.
 1. Clone the repo
    ```sh
    git clone https://github.com/redisgeek/acre-terraform-cron-replication.git --recurse-submodule
+   cd acre-terraform-cron-replication
+   ```
+   
+2. Build each of the submodules
+   ```sh
+   cd com.redisgeek.function.acre.export
+   ./mvnw clean package
+   cd ../com.redisgeek.function.acre.import
+   ./mvnw clean package
+   cd ../com.redisgeek.function.azure.storage.copy
+   ./mvnw clean package
+   cd ..
+   ```
+   >Released artifacts could be used here instead
+   
+3. Login via the service principal
+   ```sh
+   az login --service-principal --username APP_ID --password PASSWORD --tenant TENANT_ID
    ```
 
+4. Deploy the solution
+   ```sh
+   cd terraform
+   terraform plan
+   terraform apply
+   ```
 
 ## About The Project
 
@@ -47,7 +71,6 @@ The functions automate the following:
 
 ![Architecture Overview](images/v1.png)
 
-
 ### Built With
 
 * [Terraform](https://terraform.io)
@@ -55,7 +78,6 @@ The functions automate the following:
 ### Roadmap
 
 See the [open issues](https://github.com/redisgeek/acre-terraform-cron-replication/issues) for a list of proposed features (and known issues).
-
 
 ### Contributing
 
